@@ -14,12 +14,12 @@ const randomFunc = {
     symbol: getRandomSymbol,
 };
 
-clipboardEl.addEventListener("click", () => {
+clipboardEl.addEventListener("click", async () => {
     const password = resultEl.innerText;
     if (!password) {
         return;
     }
-    navigator.clipboard.writeText(password);
+    await navigator.clipboard.writeText(password);
     alert("Password copied to clipboard!");
 });
 
